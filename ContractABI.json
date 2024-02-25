@@ -1,0 +1,180 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "stateMutability": "view",
+    "type": "function",
+    "name": "admin",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ]
+  },
+  {
+    "inputs": [],
+    "name": "getAllUsers",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "userAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint",
+            "name": "userId",
+            "type": "uint"
+          },
+          {
+            "internalType": "uint256",
+            "name": "referralUser",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "myReferral",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "referralPoint",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct storeData.User[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_updateAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_myReferral",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_referralPoint",
+        "type": "uint256"
+      }
+    ],
+    "name": "updateUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_deleteAddress",
+        "type": "address"
+      }
+    ],
+    "name": "deleteUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_userAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint",
+        "name": "_userId",
+        "type": "uint"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_referralUser",
+        "type": "uint256"
+      }
+    ],
+    "name": "registerUser",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "status",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_getAddress",
+        "type": "address"
+      }
+    ],
+    "name": "getUser",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      },
+      {
+        "internalType": "uint",
+        "name": "",
+        "type": "uint"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
