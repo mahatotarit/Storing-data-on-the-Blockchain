@@ -32,8 +32,15 @@ contract storeData {
     // user registration function
     function registerUser(address _userAddress,uint _userId,uint _referralUser) external returns (bool status,string memory message) {
         
-        require(tele[_userAddress].userAddress == address(0),"Please provide valid address");
-        require(tele[_userAddress].id > 0 , "User allready exists");
+        if(_userAddress == address(0)){
+            return (false,"Please provide a valid address");
+        }
+
+        for (uint i = 0; i < userAddresses.length; i++) {
+            if (userAddresses[i] == _userAddress) {
+                return (false,"User allready exists");
+            }
+        }
 
         tele[_userAddress] = User(count,_userAddress, _userId, _referralUser, 0, 0);
 
